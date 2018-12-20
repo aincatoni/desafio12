@@ -30,16 +30,16 @@ de un segundo, al volver hacer click debe volver a estar en blanco y negro.
             <h1>PÁGINA CON MUCHAS IMAGENES</h1>
           </div>
           <div class="col-12">
-            <img class="img-b-y-n" src="https://picsum.photos/200?random" alt="">
-            <img class="img-b-y-n" src="https://picsum.photos/200?random" alt="">
-            <img class="img-b-y-n" src="https://picsum.photos/200?random" alt="">
-            <img class="img-b-y-n" src="https://picsum.photos/200?random" alt="">
-            <img class="img-b-y-n" src="https://picsum.photos/200?random" alt="">
-            <img class="img-b-y-n" src="https://picsum.photos/200?random" alt="">
-            <img class="img-b-y-n" src="https://picsum.photos/200?random" alt="">
-            <img class="img-b-y-n" src="https://picsum.photos/200?random" alt="">
-            <img class="img-b-y-n" src="https://picsum.photos/200?random" alt="">
-            <img class="img-b-y-n" src="https://picsum.photos/200?random" alt="">
+            <img src="https://picsum.photos/200?random" alt="">
+            <img src="https://picsum.photos/200?random" alt="">
+            <img src="https://picsum.photos/200?random" alt="">
+            <img src="https://picsum.photos/200?random" alt="">
+            <img src="https://picsum.photos/200?random" alt="">
+            <img src="https://picsum.photos/200?random" alt="">
+            <img src="https://picsum.photos/200?random" alt="">
+            <img src="https://picsum.photos/200?random" alt="">
+            <img src="https://picsum.photos/200?random" alt="">
+            <img src="https://picsum.photos/200?random" alt="">
           </div>
         </div>
       </div>
@@ -53,10 +53,11 @@ de un segundo, al volver hacer click debe volver a estar en blanco y negro.
 
       <script>
           $ (function(){
-          $('img').on("click", function(){
-          $(this).toggleClass("img-b-y-n");   
+            $('img').click(function() {
+              $(".active").not(this).removeClass('active');
+              $(this).toggleClass('active');
+            });       
         });
-      });
       </script>
   </body>
 </html>
